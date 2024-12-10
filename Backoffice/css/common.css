@@ -1,0 +1,550 @@
+/* 
+#222831 azul oscuro 
+#30475E azul claro
+#FF7000 naranja
+#ECECEC gris
+*/
+:root{
+    --blauFosc: #222831;
+    --blauClar: #30475E;
+    --taronja: #FF7000;
+    --gris: #ECECEC;
+}
+
+
+* {
+    color: var(--blauClar);
+    font-family: "Noto Serif", serif;
+}
+
+/********** CLASES GENERALES ************/
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+
+.text-blanc{
+    color: white;
+}
+
+.text-centrat{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float: left;
+
+}
+
+.shadow-oscuro{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
+.padding-izq-zero{
+    padding-left: 0;
+}
+
+.padding-zero{
+    padding: 0;
+}
+
+.padding-der-zer{
+    padding-right: 0;
+}
+
+.padding-inf-zero{
+    padding-bottom: 0;
+}
+
+.centrat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fondo-gris{
+    background-color: var(--gris);
+}
+
+
+.fondo-azul{
+    background-color: var(--blauFosc);
+}
+
+select{
+    padding: 0.2em 1em 0.2em 1em;
+    border: 1px solid var(--blauClar);
+    border-radius: 5px;
+    background-color: var(--gris);
+}
+
+.border-bottom{
+    border-bottom: 1px solid var(--blauClar);
+}
+
+table{
+    border-collapse: collapse;
+}
+
+/********** MENU LATERAL ************/
+#menu{
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 16.6666666667%;
+    overflow-y: scroll;
+}
+
+#logo{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+.separacio{
+    border-bottom: 1px solid var(--blauClar);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--blauClar);
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    line-height: 1.5em;
+}
+
+nav ul{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav ul li ul {
+    background-color: var(--blauClar);
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: var(--blauFosc);
+    transition: 0.5s ease 0s;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+nav ul li a:hover i{
+    color:white;
+    transition: 0.5s ease 0s;
+}
+
+nav i{
+    color: var(--blauClar);
+    text-align: center;
+    width: 2.5em;
+    font-size: 1.2em;
+}
+
+#dropdown{
+    display: none;
+    border: none;
+    font-size: 1.5em;
+}
+
+
+.botoTaronja {
+    background-color: var(--taronja);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 0.3em;
+    border: 0em;
+    color: white;
+}/*
+    color: white;
+    background-color: var(--taronja);
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 8px;
+}
+*/
+.botoTaronja a {
+    color: white;
+}
+
+.botoTaronja a:hover{
+    opacity: 0.5;
+}
+th, td {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
+/********** PARTE CENTRAL ************/
+.col-10 > div > h2{
+    background-color: var(--blauFosc);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+    text-align: center;
+}
+
+#menu,
+h2{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+/*PARTE DE LAS TABLAS/FORMULARIOS*/
+/*FILTROS*/
+.rowFiltres {
+    background-color: var(--gris);
+}
+
+.boxFiltre {
+    padding: 2em 4em 2em 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxFiltre label {
+    padding-bottom: 0.3em;
+}
+
+.boxFiltre input, .boxFiltre select {
+    padding: 0.5em 2em 0.5em 1em;
+    background-color: white;
+    border-radius: 0.2em;
+    border: 0em;
+}
+
+/*FILTRE BOTÓ*/
+.container-button-filter {
+    display: flex;
+    align-items: center;
+    padding-right: 4em;
+    padding-bottom: 1em;
+}
+
+.filter-button {
+    background-color: var(--taronja);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 0.3em;
+    border: 0em;
+    color: white;
+    /*margin-left: auto;*/
+}
+
+.filter-button a:hover{
+    color: white;
+    opacity: 0.5;
+}
+/*BOX TAULA*/
+.boxTaula {
+    padding: 3em 1em 2em 1em;
+}
+  
+.checkBoxth {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    width: auto;
+}
+  
+.boxBtn {
+    padding-bottom: 0.8em;
+}
+  /*
+button
+ {
+    background-color: var(--taronja);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 0.3em;
+    border: 0em;
+    color: white;
+}*/
+
+button a:hover{
+    color:white;
+    opacity: 0.5;
+}
+  
+.boxBtn label {
+    padding: 0 0.5em 0 0.5em;
+}
+  /*
+.boxBtn select {
+    padding: 0.2em 2em 0.2em 0.5em;
+    border-radius: 0.2em;
+    border-color: var(--blauFosc);
+}
+*/
+.divAccions{
+    display: inline-flex;
+    gap: 1.5em;
+    color: var(--blauClar);
+}
+
+.divAccions a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.divAccions i:hover{
+    color: var(--taronja);
+}
+
+/*TAULA*/
+.taulaGestio {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    border: 0.01px solid var(--blauFosc);
+}
+
+.taulaGestio{
+    border: none;;
+
+}
+
+.taulaGestio img {
+    width: 1.3em;
+    cursor: pointer;
+}
+
+thead{
+    background-color:var(--gris);
+    /*border-bottom: 1px solid var(--blauClar);*/
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--gris);
+}
+
+th, td {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding: 0.7em 0.5em 0.7em 0.5em;
+}
+
+
+
+.paginacion a:hover{
+    color: var(--taronja);
+}
+
+.boxBtn a {
+    text-decoration: none; 
+    color: inherit;       
+}
+
+.boxBtn a:visited, 
+.boxBtn a:hover, 
+.boxBtn a:focus, 
+.boxBtn a:active {
+    text-decoration: none; 
+    color: white;
+    opacity: 0.5;       
+}
+
+/*FORMULARIS (ALTA, MODIFICAR I VISUALITZAR)*/
+.formulari{
+    display: grid;
+    gap: 1em;    
+}
+
+.inputVisualitzar{
+    background-color: var(--gris);
+    padding: 0.3em 0.8em;
+    border-radius: 0.35em;
+    width: 100%;
+}
+
+.inputSolsVisualitzar{
+    background-color: transparent;
+    border: 0;
+    appearance: none;
+}
+
+/* BOTO TORNAR HECHO POR EL JAVMAN MAGNIFICO */
+
+.botoTornar{
+    background-color: var(--blauClar);
+    padding: 0.4em 0.8em 0.4em 0.8em;
+    border-radius: 0.3em;
+    border: 0em;
+    color: white;
+    text-decoration: none;
+}
+
+/***********PAGINACION*******/
+.paginacion{
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginacion a.activo{
+    color: var(--taronja);
+}
+
+.paginacion a{
+    float: left;
+    padding: 8px 16px;
+    /*margin: 0 4px;*/
+    border: 1px solid var(--blauClar);
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+    #logo{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px)
+{   
+    .container-fluid > .row {
+        flex-direction: column;
+      }
+   
+    .container-fluid > .row > .col-10 {
+        width: 100%;
+    }
+    /********** HEADER ************/
+    .container-fluid > .row > .col-2{
+        height: 4.2em;
+    }
+
+    #menu{
+        right:0;
+        width: 100%;
+        display: flex;
+        bottom: auto;
+        align-items: center;
+        justify-content: space-between;
+        overflow:visible;
+    }
+    nav{
+        display: none;
+        top: 4.2em;
+    }
+
+    nav ul{
+        margin-top: 0em;
+        background-color: #ececec;
+        border: 1px solid var(--blauClar);
+    }
+
+    nav ul li{
+        border: 1px solid var(--blauClar);
+
+    }
+    .show{
+        position: absolute;
+        display: block;
+        width: 100%;
+        max-height: calc(100vh - 3.2em);
+        overflow: scroll;
+        animation: slideDown 0.4s ease-in-out;
+    }
+
+    #logo {
+        width: 5em;
+        border-bottom: none;
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
+    }
+
+    .separacio{
+        border-bottom: none;
+    }
+
+
+    #dropdown{
+        display: block;
+        margin-right: 2em;
+    }
+
+
+    .col-10 > div > h2{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+
+}
+
+@media only screen and (max-width:610px){
+    #filtros thead{
+        text-align: center;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    #filtros td{
+        padding-right: 0;
+    }
+    #usuarios thead{
+        display: none;
+
+    }
+    table tr{
+        display: block;
+    }
+    table{
+        width: 100%;
+    }
+    table td {
+        display: block;
+        padding-right: 0.5em;
+    }
+    #usuarios td {
+        text-align: right;
+    }
+
+    #usuarios tr{
+        border-top: 1px solid var(--blauClar);
+    }
+
+    #usuarios tr:last-child{
+        border-bottom: 1px solid var(--blauClar);
+    }
+
+    table td:before{
+        content:attr(data-label);
+        float: left;
+        font-weight: bold;
+        padding-left: 0.5em;
+    }
+}
+    /*********** DESPLAZAMIENTO DEL MENÚ ***********/
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+

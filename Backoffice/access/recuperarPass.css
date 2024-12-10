@@ -1,0 +1,19 @@
+
+
+#recuperar{
+    padding: 1.5em;
+    text-align: justify;
+    border-radius: 18px;
+    margin-top: 5em;
+}
+
+.margin-auto{
+    margin: auto;
+}
+
+#email{
+    width: 100%;
+    border: none;
+    height: 2em;
+}
+

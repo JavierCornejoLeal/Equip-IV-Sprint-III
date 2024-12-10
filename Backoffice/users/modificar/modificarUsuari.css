@@ -1,0 +1,49 @@
+
+
+#usuario td:last-child{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+form{
+    width: fit-content;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+td{
+    padding-top:2em;
+    text-align: left;
+    background-color: white;
+}
+
+
+
+@media only screen and (max-width:610px){
+    #usuario{
+        padding: 1em 2em;
+        margin-bottom: 2em;
+    }
+    table tr{
+        display: block;
+    }
+  
+    table td {
+        display: block;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    
+
+    table td:before{
+        content:attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+}
