@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFlow - Regístrate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="registro.css">
+    <link rel="shortcut icon" href="../../img/favicon_4.png" type="image/x-icon">
+    <script src="../../apiAccess/crud.js"></script>
+    <script src="registro.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div id="iniciarSesion">
+                    <img src="../../img/logo_header2.png" alt="Logo StockFlow">
+                    <form action="">
+                        <label for="name">Nombre*:</label>
+                        <input type="text" name="name" id="name" class="inputRegistration shadow-oscuro" 
+                        minlength="2" maxlength="25" pattern="^[A-Za-z\s]{2,25}$" placeholder="Introduce tu nombre"
+                        required>
+                        <label for="email">Correo electrónico*:</label>
+                        <input type="email" name="email" id="email" class="inputRegistration shadow-oscuro " 
+                        placeholder="Introduce tu correo"
+                        required>
+                        <label for="pswd">Contraseña*:</label>
+                        <input type="password" name="pswd" id="pswd" class="inputRegistration shadow-oscuro" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
+                        title="La contraseña tiene que tener al menos 8 caracteres y contener al menos una letra mayúscula, una minúscula, un número y un carácter especial."
+                        placeholder="Introduce tu contraseña"
+                        required>
+                        <i class="fa-regular fa-eye-slash" id="eye"></i>
+                        <label for="pswd">Repetir contraseña*:</label>
+                        <input type="password" name="pswd" id="repeatPassword" class="inputRegistration shadow-oscuro" 
+                        placeholder="Repite tu contraseña"
+                        required>
+                        <input type="checkbox" name="terms" id="terms" required>
+                        <label for="recuerdame"><a href="">Términos y condiciones</a></label>
+                        <h4 id="errorMessage"></h4>
+                        <button id="signup">Registrarse</button>
+                    </form>
+
+                    <p><a href="../../index.html">Volver al inicio de sesión</a></p>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

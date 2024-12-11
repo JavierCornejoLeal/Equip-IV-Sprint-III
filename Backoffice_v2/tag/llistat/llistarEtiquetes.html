@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFlow · Etiquetas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+    <link rel="shortcut icon" href="../../img/favicon_4.ico" type="image/x-icon">
+    <!-- Añadidos JQuery para funcionamiento autocomplete-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script src="../../common/js/common.js"></script>
+    <script src="llistarEtiquetes.js"></script>
+    <script type="text/javascript" src="../../apiAccess/crud.js"></script>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <div id="menu" class="fondo-gris">
+                    <div class="centrat separacio">
+                        <a href="../../blog/blog.html"><img src="../../img/logo_header.png" alt="Logo Stockflow" id="logo"></a>
+                    </div>
+                    <nav>
+                        <ul id="opciones" class="padding-izq-zero">
+                            <li>
+                                <a href="../../posts/llistat/llistarPosts.html"><i class="fa-regular fa-newspaper"></i>Posts</a>
+                            </li>
+                            <li>
+                                <a href="../../comments/llistat/llistarComentaris.html"><i class="fa-regular fa-message"></i>Comentarios</a> 
+                            </li>
+                            <li>
+                                <a class="active" href="../../tag/llistat/llistarEtiquetes.html"><i class="fa-solid fa-tag"></i>Etiquetas</a>
+                            </li>
+                            <li>
+                                <a href="../../users/llistar/llistarUsuaris.html"><i class="fa-solid fa-users"></i>Usuarios</a> 
+                            </li>
+                            <li>
+                                <a href="../../index.html"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button id="dropdown"><i class="fa-solid fa-bars text-blanc"></i></button>
+                </div>
+            </div>
+            <div class="col-10 padding-zero">
+                <div>
+                    <h2>ETIQUETAS</h2>
+                    <div class="container-fluid">
+                        <div class="row rowFiltres shadow-oscuro">
+                            <div class="col-4">
+                                <div class="boxFiltre">
+                                    <label for="filter-name">Filtrar por nombre:</label>
+                                    <input type="text" id="nom" placeholder="Introduce un nombre" class="shadow-oscuro">
+                                    <button id="filtrarFuncion" class="filter-button text-blanc">Filtrar etiqueta</button>
+                                </div>
+                            </div>
+                            <div class="col-4"></div>
+                            <div class="col-4"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="centre">
+                                    <div class="float-left">
+                                        <select name="" id="selectorAccion">
+                                            <option id="sinAccion">Acciones en lote</option>
+                                            <option id="eliminarLote" value="eliminar">Eliminar</option>
+                                        </select>
+                                        <button id="aplicarAccion" class="botoTaronja"><a href="">Aplicar</a></button>
+                                    </div>
+                                    <div class="float-right">
+                                        <button id="novaEtiqueta" class="botoTaronja"><a href="../alta/altaEtiqueta.html">Añadir etiqueta</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="boxTaula tabla-listar">
+                                    <table class="taulaGestio shadow-oscuro">
+                                        <thead>
+                                            <tr>
+                                                <th class="checkBoxth">
+                                                    <input id="seleccionarTodo" type="checkbox" onclick="seleccionarTodosCheckboxes(this)">
+                                                </th>
+                                                <th>ID</th>
+                                                <th>Nombre Etiqueta</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="files">
+
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                            <div class="paginacion">
+                                <a href="" class="activo">1</a>
+                                <a href="" >2</a>
+                                <a href="">3</a>
+                                <a href="">&raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

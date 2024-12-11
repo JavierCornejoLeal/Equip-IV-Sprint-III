@@ -1,0 +1,161 @@
+/**** CATEGORIAS FILTRO ****/
+
+.categorias {
+    background-color: var(--gris);
+}
+
+.categorias-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.categorias-container p {
+    margin: 0;
+    padding: 1em 0;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+.categorias-container select {
+    width: 100%;
+    padding: 0.5em 2em 0.5em 1em;
+    background-color: white;
+    border-radius: 0.2em;
+    border: 0em;
+}
+
+/**** POSTS ****/
+
+.mostrarPosts {
+    padding-top: 1.5em;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 1em;
+}
+
+.post-container {
+    width: 100%;
+    background-color: var(--gris);
+    border-radius: 0.7em;
+    display: flex;
+    flex-direction: row;
+    box-shadow: #30475E 0.3em 0.3em 2em 0.02em;
+    margin-top: 3em;
+}
+
+/**** TEXTO DEL POST ****/
+
+.text-container {
+    width: 50%;
+    padding: 4em 3em;
+}
+
+.titulo-post p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+    line-height: 1.6em;
+}
+
+.fecha-post p {
+    margin: 0;
+    font-weight: 100;
+    padding-bottom: 1em;
+}
+
+.etiqueta-post {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.etiqueta-post p {
+    margin: 0;
+    padding-left: 0.5em;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.etiqueta-post i {
+    font-size: 1.1em;
+    padding-top: 0.2em;
+}
+
+.descripcion-post {
+    display: -webkit-box; 
+    -webkit-line-clamp: 9; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.descripcion-post p {
+    margin: 0;
+    letter-spacing: 0.04em;
+    line-height: 1.4em;
+}
+
+
+/**** IMG DEL POST ****/
+
+.img-container {
+    width: 50%;
+}
+
+.img-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0.7em 0.7em 0;
+}
+
+/**** BOTON DE AFIGER COMENTARIS ****/
+
+.afegirComentari {
+    margin-top: 1.5em;
+}
+
+/**** COMENTARIS DEL POST ****/
+
+.comentariosPost {
+
+    margin-top: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comentariosPost h5 {
+    margin: 0;
+    font-size: 1.3em;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+}
+
+.comentario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--gris);
+    padding: 1em;
+    width: 100%;
+    border-radius: 0.3em;
+    margin-top: 1em;
+}
+
+.comentario p {
+    margin: 0;
+    line-height: 1.3em;
+    padding-bottom: 0.5em;
+}

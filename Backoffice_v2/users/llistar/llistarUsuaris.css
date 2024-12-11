@@ -1,0 +1,112 @@
+
+h2{
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+#usuarios a:hover,
+table i:hover{
+    color: var(--taronja);
+    cursor: pointer;
+}
+/******************* FILTROS ********************/
+.row .col-4:nth-child(3) .boxFiltre{
+    display: block;
+}
+
+.boxFiltre select {
+    width: 100%;
+    margin-top: 0.2em;
+}
+
+#searchUser {
+    margin-right: em;
+}
+
+
+/******************* PARTE CENTRAL ********************/
+
+#centre{
+    margin-top: 2em;
+    margin-bottom: 4em;
+    padding: 1em;
+}
+
+select{
+    padding: 0.2em 1em 0.2em 1em;
+    border: 1px solid var(--blauClar);
+    border-radius: 5px;
+    background-color: var(--gris);
+}
+
+ #funnel{
+    background-color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.25em;
+ }
+/******************* USUARIOS ********************/
+.padding-extra{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#usuarios{
+    text-align: center;
+    padding: 1em;
+}
+/*
+#usuarios > table{
+    width: 100%;
+    border-collapse:collapse;
+}*/
+
+td i {
+    padding: 0 1em 0 1em;
+}
+
+#usuarios tr td:nth-child(2) {
+    font-weight: 600;
+}
+
+.paginacion{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginacion a.activo{
+    color: var(--taronja);
+}
+
+.paginacion a{
+    float: left;
+    padding: 8px 16px;
+    /*margin: 0 4px;*/
+    border: 1px solid var(--blauClar);
+}
+
+
+@media only screen and (max-width: 433px){
+    #centre  button {
+        margin-bottom: 1.5em;
+    }
+
+}
+
+@media only screen and (max-width:610px){
+    #filtros td{
+        padding-right: 0;
+        text-align: left;
+    }
+    #filtros tr:last-child td{
+        text-align: right;
+    }
+    
+    #usuarios {
+        padding: 0;
+    }
+
+}

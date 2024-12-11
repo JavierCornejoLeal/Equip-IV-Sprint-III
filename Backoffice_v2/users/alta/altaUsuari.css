@@ -1,0 +1,71 @@
+
+.error {
+    color: red;
+}
+
+.valid {
+    color: green;
+}
+
+#usuario tr:last-child td:last-child{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+tbody tr:nth-child(2n){
+    background-color: white;
+}
+
+tr td:first-child{
+    width: 25%;
+}
+
+form{
+    width: 50%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+td{
+    padding-top:2em;
+    background-color: white;
+    text-align: left;
+}
+
+
+
+
+@media only screen and (max-width:610px){
+    #usuario{
+        padding: 1em 2em;
+        margin-bottom: 2em;
+    }
+    table tr{
+        display: block;
+    }
+  
+    table td {
+        display: block;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    table td:before{
+        content:attr(data-label);
+        float: left;
+        font-weight: bold;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    tr td:first-child{
+        width: 100%;
+    }
+    
+}

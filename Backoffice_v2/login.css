@@ -1,0 +1,85 @@
+*{
+    color: #30475E;
+    font-family: "Noto Serif", serif;
+}
+
+#iniciarSesion {
+    margin: auto;
+    width: fit-content;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ececec;
+    border-radius: 18px;
+    padding: 3em 5em 3em 5em;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+img{
+    width: 270px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#login{
+    width: 100%;
+    margin-right: 1.5em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    color: white;
+    background-color: var(--taronja);
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+    font-weight: 700;
+    padding: 0.43em 0.7em;
+    font-size: 0.9em;
+}
+
+#email, 
+#pswd{
+    border: none;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em 1em; 
+    font-size: medium; 
+}
+
+form > p {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+form{
+    padding-top: 2.5em;
+}
+
+div > p {
+    padding-top: 1em;
+}
+
+p > a {
+    text-decoration: underline;
+    text-align: center;
+    color: var(--blauClar);
+}
+#eye{
+    position: absolute;
+    transform: translateX(-1.9em);
+    padding-top: 1.5em;
+    font-size: large;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 460px) {
+    #iniciarSesion{
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-top:3em;
+    }
+}

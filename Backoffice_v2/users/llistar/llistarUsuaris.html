@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockFlow · Usuarios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="llistarUsuaris.css">
+    <link rel="shortcut icon" href="../../img/favicon_4.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="../../common/js/common.js"></script>
+    <script src="../../apiAccess/crud.js"></script>
+    <script src="llistarUsuaris.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 padding-zero">
+                <div id="menu" class="fondo-gris">
+                    <div class="centrat separacio">
+                        <a href="../../blog/blog.html"><img src="../../img/logo_header.png" alt="Logo Stockflow" id="logo"></a>
+                    </div>
+                    <nav>
+                        <ul id="opciones" class="padding-izq-zero">
+                            <li>
+                                <a href="../../posts/llistat/llistarPosts.html"><i class="fa-regular fa-newspaper"></i>Posts</a>
+                            </li>
+                            <li>
+                                <a href="../../comments/llistat/llistarComentaris.html"><i class="fa-regular fa-message"></i>Comentarios</a> 
+                            </li>
+                            <li>
+                                <a href="../../tag/llistat/llistarEtiquetes.html"><i class="fa-solid fa-tag"></i>Etiquetas</a>
+                            </li>
+                            <li>
+                                <a href="../../users/llistar/llistarUsuaris.html" class="active"><i class="fa-solid fa-users active"></i>Usuarios</a> 
+                            </li>
+                            <li>
+                                <a href="../../index.html"><i class="fa-solid fa-right-from-bracket"></i>Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button id="dropdown"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+            <div class="col-10 padding-zero">
+                <div class="container-fluid">
+                    <div class="row fondo-azul">
+                        <div class="col-12">
+                            <div class="text-centrat">
+                                <!----------------------------------------------->
+                                <!--- DEBEN MODIFICAR EL TÍTULO-->
+                                 <!---------------------------------------------->
+                                <h2 class="text-blanc">USUARIOS</h2>
+                                <!----------------------------------------------->
+                                <!--- PUEDEN EMPEZAR AQUÍ --->
+                                 <!----------------------------------------------->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row rowFiltres shadow-oscuro" id="panel">
+                        <div class="col-4 padding-der-zero">
+                            <div class="boxFiltre">
+                                <label for="name">Nombre:</label>
+                                <input type="text" id="name" placeholder="Introduce un nombre" class="shadow-oscuro">
+                            </div>
+                        </div>
+
+                        <div class="col-4 padding-der-zero">
+                            <div class="boxFiltre">
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" id="email" placeholder="Introduce un correo electrónico" class="shadow-oscuro">
+                            </div>
+                        </div>
+
+                        <div class="col-4 padding-der-zero">
+                            <div class="boxFiltre">                
+                                <label for="rol">Rol:</label>
+                                <select name="user_profile" id="user_profile" class="shadow-oscuro">
+                                    <option value="" selected="selected">Seleccione el rol</option>
+                                    <option value="">Administrador</option>
+                                    <option value="">Editor</option>
+                                    <option value="">Publicador</option>
+                                </select>
+                                <button id="cleanFilters" class="filter-button botoTornar"><a class="text-blanc">Limpiar filtros</a></button>                 
+                                <button id="searchUser" class="filter-button"><a class="text-blanc">Filtrar usuario</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="centre">
+                                <div class="float-left">
+                                    <select name="bulkActions" id="bulkActions">
+                                        <option selected="selected">Acciones en lote</option>
+                                        <option value="Eliminar">Eliminar</option>
+                                    </select>
+                                    <button class="botoTaronja" id="apply-BA">Aplicar</button>
+                                    <button id="funnel"><i class="bi bi-funnel"></i></button>
+                                </div>
+                                <div class="float-right">
+                                    <button class="botoTaronja" id="newUser"><a href="../alta/altaUsuari.html">Añadir usuario</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row padding-extra">
+                        <div class="col-12 ">
+                            <div class="tabla-listar">
+                                <table class="shadow-oscuro">
+                                    <thead class="border-bottom">
+                                        <th>
+                                            <input type="checkbox" name="selectAll" id="selectAll">
+                                        </th>
+                                        <th>Nombre de usuario </th>
+                                        <th>Correo electrónico</th>
+                                        <th> Rol</th>
+                                        <th>Acciones</th>
+                                    </thead>
+                                    <tbody id="users-list">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="paginacion" id="paginador">
+                                <a href="">&laquo;</a>
+                                <a href="" class="activo">1</a>
+                                <a href="" >2</a>
+                                <a href="">3</a>
+                                <a href="">&raquo;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
